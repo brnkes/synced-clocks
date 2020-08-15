@@ -1,12 +1,23 @@
+@import "~src/styles";
+
+$colon-margin: 3rem;
+
 div {
   display: flex;
 
   app-digit + app-digit {
     margin-left:0.5rem;
   }
+
+  app-colon + div {
+    margin-left:$colon-margin;
+  }
 }
 
 :host > div {
   border:2px solid black;
+  background-color: #181818;
   border-radius: 4px;
+
+  width: $digit-width * 6 + $colon-margin * 3;
 }

@@ -1,8 +1,11 @@
+@import "~src/styles";
+
 @mixin shape-base{
   width:5rem;
   height:1rem;
 
-  background-color: #888888;
+  // Unlit
+  background-color: #4e4e4e;
 
   transform-origin: top left;
 }
@@ -10,16 +13,11 @@
 :host > div {
   position:relative;
 
-  width: 7rem;
+  width: $digit-width;
   height: 13rem;
-
-  background-color: red;
 
   & > div {
     position: absolute;
-
-    // Unlit
-    background-color: #888888;
 
     &.lit {
       background-color: #66bf3c;

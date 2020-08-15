@@ -2,7 +2,8 @@ div {
   width:20rem;
   height:20rem;
 
-  background-color: blue;
+  background-color: #d5d5d5;
+  border:0.1rem solid #333333;
   border-radius: 50%;
 }
 
@@ -15,14 +16,22 @@ div > app-hand {
   width:10rem;
 
   & {
-    background-color: red;
+    background-color: #890000;
   }
 }
 
 .minutes {
   width:8rem;
+
+  & {
+    background-color: #00006c;
+  }
 }
 
 .hours {
   width:6rem;
+
+  & {
+    background-color: #005c00;
+  }
 }
