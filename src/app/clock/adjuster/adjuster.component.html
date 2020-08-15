@@ -1,3 +1,13 @@
 <section>
-  <button>Adjust Time</button>
+  <form *ngIf="isAdjusting" [formGroup]="adjusterFormGroup" (ngSubmit)="applyAdjustment()" novalidate>
+    <label>Please set the new time >></label>
+    <input
+      type="text"
+      [value]="lastSeenTime$ | async"
+      formControlName="lastSeenTime"
+    />
+    <button>Apply Changes</button>
+  </form>
+
+  <button *ngIf="!isAdjusting" (click)="shouldAdjust()">Adjust Time</button>
 </section>

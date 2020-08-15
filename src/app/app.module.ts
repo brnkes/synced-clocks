@@ -8,6 +8,7 @@ import { DigitalClockComponent } from './clock/digital/digital-clock.component';
 import { AdjusterComponent } from './clock/adjuster/adjuster.component';
 import { AnalogClockComponent } from './clock/analog/analog-clock.component';
 import { HandComponent } from './components/hand/hand.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HandComponent } from './components/hand/hand.component';
     HandComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

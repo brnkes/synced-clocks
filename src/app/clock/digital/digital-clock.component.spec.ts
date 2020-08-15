@@ -1,7 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {DigitalClockComponent} from "./digital-clock.component";
-import {parse, parseISO} from 'date-fns/fp';
+import {DigitalClockComponent} from './digital-clock.component';
 
 describe('DigitalClockComponent', () => {
   let component: DigitalClockComponent;
@@ -9,7 +8,7 @@ describe('DigitalClockComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DigitalClockComponent ]
+      declarations: [ DigitalClockComponent ],
     })
     .compileComponents();
   }));
