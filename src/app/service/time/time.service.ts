@@ -17,12 +17,16 @@ export class TimeService {
         const timestamp = now + secondsElapsed * 1000;
         const currentTime = new Date(timestamp);
 
-        return currentTime;
+        const hh = getHours(currentTime);
+        const mm = getMinutes(currentTime);
+        const ss = getSeconds(currentTime);
+
+        return [hh, mm, ss];
       }),
     );
   }
 
-  getTime$(): Observable<Date> {
+  getTime$(): Observable<[number, number, number]> {
     return this.time$;
   }
 

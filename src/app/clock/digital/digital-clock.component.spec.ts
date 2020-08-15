@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DigitalComponent } from './digital.component';
+import {DigitalClockComponent} from "./digital-clock.component";
 import {parse, parseISO} from 'date-fns/fp';
 
-describe('DigitalComponent', () => {
-  let component: DigitalComponent;
-  let fixture: ComponentFixture<DigitalComponent>;
+describe('DigitalClockComponent', () => {
+  let component: DigitalClockComponent;
+  let fixture: ComponentFixture<DigitalClockComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DigitalComponent ]
+      declarations: [ DigitalClockComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DigitalComponent);
+    fixture = TestBed.createComponent(DigitalClockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -26,8 +26,8 @@ describe('DigitalComponent', () => {
 
   describe('convertToHMS', () => {
     it('works properly', () => {
-      const time = parseISO('2020-08-14T04:15:29');
-      const result = component.convertToHMS(time);
+      // const time = parseISO('2020-08-14T04:15:29');
+      const result = component.convertToHMS([4, 15, 29]);
       expect(result).toEqual([0, 4, 1, 5, 2, 9]);
     });
   });

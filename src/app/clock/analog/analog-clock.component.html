@@ -1,0 +1,6 @@
+<div *ngIf="angles$ | async ; let angles">
+  <app-hand class="seconds" [ngStyle]="getTransformation(angles[2])"></app-hand>
+  <app-hand class="minutes" [ngStyle]="getTransformation(angles[1])"></app-hand>
+  <app-hand class="hours" [ngStyle]="getTransformation(angles[0])"></app-hand>
+</div>
+<app-adjuster [clockType]="'Analog'"></app-adjuster>

@@ -1,8 +1,12 @@
 div {
   display: flex;
-  background-color: #bccdff;
 
   app-digit + app-digit {
     margin-left:0.5rem;
   }
+}
+
+:host > div {
+  border:2px solid black;
+  border-radius: 4px;
 }

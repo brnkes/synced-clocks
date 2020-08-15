@@ -5,10 +5,10 @@ import {map, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-digital-clock',
-  templateUrl: './digital.component.html',
-  styleUrls: ['./digital.component.scss']
+  templateUrl: './digital-clock.component.html',
+  styleUrls: ['./digital-clock.component.scss']
 })
-export class DigitalComponent implements OnInit {
+export class DigitalClockComponent implements OnInit {
   digits$;
 
   constructor(
@@ -23,13 +23,7 @@ export class DigitalComponent implements OnInit {
 
   }
 
-  convertToHMS(date: Date): number[] {
-    const hh = getHours(date);
-    const mm = getMinutes(date);
-    const ss = getSeconds(date);
-
-    Math.floor(hh / 10);
-
+  convertToHMS([hh, mm, ss]: [number, number, number]): number[] {
     const digits = (val) => [Math.floor(val / 10), val % 10];
 
     return [

@@ -1,0 +1,28 @@
+div {
+  width:20rem;
+  height:20rem;
+
+  background-color: blue;
+  border-radius: 50%;
+}
+
+div > app-hand {
+  position: absolute;
+  transform-origin: left;
+}
+
+.seconds {
+  width:10rem;
+
+  & {
+    background-color: red;
+  }
+}
+
+.minutes {
+  width:8rem;
+}
+
+.hours {
+  width:6rem;
+}

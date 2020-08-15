@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TimeService} from '../../service/time/time.service';
 
 @Component({
   selector: 'app-adjuster',
@@ -9,7 +10,11 @@ export class AdjusterComponent implements OnInit {
   @Input()
   clockType: 'Analog' | 'Digital';
 
-  constructor() { }
+  isAdjusting = false;
+
+  constructor(
+    private timeService: TimeService,
+  ) { }
 
   ngOnInit(): void {
 
