@@ -1,0 +1,8 @@
+div {
+  display: flex;
+  background-color: #bccdff;
+
+  app-digit + app-digit {
+    margin-left:0.5rem;
+  }
+}

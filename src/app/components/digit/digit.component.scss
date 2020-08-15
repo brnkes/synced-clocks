@@ -17,8 +17,17 @@
 
   & > div {
     position: absolute;
+
+    // Unlit
+    background-color: #888888;
+
+    &.lit {
+      background-color: #66bf3c;
+    }
   }
 }
+
+
 
 .horizontal {
   @include shape-base;
