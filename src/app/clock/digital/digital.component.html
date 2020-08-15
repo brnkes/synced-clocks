@@ -1,18 +1,17 @@
-<div>
+<div *ngIf="digits$ | async; let digits">
   <div>
-    <app-digit></app-digit>
-    <app-digit></app-digit>
+    <app-digit [digitToDisplay]="digits[0]"></app-digit>
+    <app-digit [digitToDisplay]="digits[1]"></app-digit>
   </div>
   <app-colon></app-colon>
   <div>
-    <app-digit></app-digit>
-    <app-digit></app-digit>
+    <app-digit [digitToDisplay]="digits[2]"></app-digit>
+    <app-digit [digitToDisplay]="digits[3]"></app-digit>
   </div>
   <app-colon></app-colon>
   <div>
-    <app-digit></app-digit>
-    <app-digit></app-digit>
+    <app-digit [digitToDisplay]="digits[4]"></app-digit>
+    <app-digit [digitToDisplay]="digits[5]"></app-digit>
   </div>
 </div>
-<div>Adjust Time Digital</div>
-
+<app-adjuster [clockType]="'Digital'"></app-adjuster>
