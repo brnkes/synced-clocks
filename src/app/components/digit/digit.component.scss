@@ -1,0 +1,59 @@
+@mixin shape-base{
+  width:5rem;
+  height:1rem;
+
+  background-color: #888888;
+
+  transform-origin: top left;
+}
+
+:host > div {
+  position:relative;
+
+  width: 7rem;
+  height: 13rem;
+
+  background-color: red;
+
+  & > div {
+    position: absolute;
+  }
+}
+
+.horizontal {
+  @include shape-base;
+  left:1rem;
+}
+
+.vertical {
+  @include shape-base;
+  transform: rotate(90deg);
+}
+
+.top {
+  top:0;
+}
+
+.upper {
+  top:1rem;
+}
+
+.lower {
+  top:7rem;
+}
+
+.left {
+  left:1rem;
+}
+
+.right {
+  left:7rem;
+}
+
+.middle {
+  top:6rem;
+}
+
+.bottom {
+  bottom:0;
+}
